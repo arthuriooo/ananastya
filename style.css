@@ -1,0 +1,325 @@
+@font-face {
+    font-family: royal; /* Имя шрифта */
+    src: url(BLKCHCRY.TTF); /* Путь к файлу со шрифтом */
+    }
+
+@keyframes color {
+    33% { background: #4d2975}
+    67% { background: darkred}
+    100% { background: #4d2975}
+}
+
+@keyframes buttons {
+    from { background: #4d2975; box-shadow: 0px 5px 30px #4d2975;}
+    to { background: darkred; box-shadow: 0px 5px 30px darkred;}
+}
+
+@keyframes buttonsR {
+    from { background: darkred; box-shadow: 0px 5px 30px darkred;}
+    to { background: #4d2975; box-shadow: 0px 5px 30px #4d2975;}
+}
+
+@keyframes king {
+    from { width: 12% }
+    to { width: 13% }
+}
+
+@keyframes queen {
+    from { width: 12% }
+    to { width: 13% }
+}
+
+@keyframes kingR {
+    from { width: 13% }
+    to { width: 12% }
+}
+
+@keyframes queenR {
+    from { width: 13% }
+    to { width: 12% }
+}
+
+@keyframes quiz {
+    from { height: 0 }
+    to { height: 85% }
+}
+
+@keyframes textanimate {
+    33% { color: #4d2975}
+    67% { color: darkred}
+    100% { color: #4d2975}
+}
+
+#back {
+    position: absolute;
+    bottom: 0;
+    width:100%;
+}
+
+#center {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    z-index: 99;
+}
+
+#maintext {
+    padding: 0;
+    width: 40%;
+    margin: 0 auto;
+    border: 10px double white;
+    background-color: #4a2870;
+    border-radius: 20px;
+    animation-name: color;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#maintext p {
+    font-size: 70px;
+    text-align: center;
+    font-weight: 500;
+    font-family: royal;
+    color: white;
+    margin: 10px 0;
+}
+
+#choice {
+    width: 100%;
+    height: 52%;
+    position: absolute;
+    top: 0;
+    z-index: 20;
+}
+
+#choiceCenter {
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#king {
+    position: absolute;
+    z-index: 30;
+    width: 12%;
+    bottom: 0;
+    left: 34%;
+    animation-name: kingR;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+
+#queen {
+    position: absolute;
+    z-index: 30;
+    width: 12%;
+    bottom: 0;
+    right: 34%;
+    animation-name: queenR;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+
+#king:hover {
+    animation-name: king;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    width: 13%;
+}
+
+#queen:hover {
+    animation-name: queen;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    width: 13%;
+}
+
+/* ------------------------------------------------ */
+
+#center2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0;
+    z-index: 101;
+}
+
+#quiz {
+    padding: 0;
+    width: 40%;
+    margin: 30px auto 0;
+    border: 10px double #4d2975;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 20px;
+    animation-name: queen;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    height: 85%;
+}
+
+#kingQuiz {
+    height: 100%;
+}
+
+#queenQuiz {
+    height: 100%;
+}
+
+#theking {
+    width: 25%;
+    position: relative;
+    float: right;
+    margin-right: 50px;
+}
+#thequeen {
+    width: 25%;
+    position: relative;
+    float: right;
+    margin-right: 50px;
+}
+#queenQuiz>p {
+    font-family: royal;
+    font-size: 70px;
+    margin-left: 40px;
+    margin-top: 0px;
+    color: #4d2975;
+    position: absolute;
+    top: 10%;
+    animation-name: textanimate;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+#kingQuiz>p {
+    font-family: royal;
+    font-size: 70px;
+    margin-left: 40px;
+    margin-top: 0px;
+    color: #4d2975;
+    position: absolute;
+    top: 10%;
+    animation-name: textanimate;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+#line {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    border: 1.5px solid #4d2975;
+    clear: both;
+}
+
+#startQ, #q1,#q2,#q3,#q4,#q5,#q6,#q7,#q8,#q9,#q10, #result, #yourResp {
+    height: 50%;
+    margin: -20px;
+}
+
+#startQ p, #q1 p,#q2 p,#q3 p,#q4 p,#q5 p,#q6 p,#q7 p,#q8 p,#q9 p,#q10 p, #result p, #yourResp p {
+    font-size: 40px;
+    text-align: center;
+    color: #4d2975;
+    margin: 30px 50px 0;
+}
+#result p {
+    font-size: 30px;
+}
+
+#startQ button, #q1 button,#q2 button,#q3 button,#q4 button,#q5 button,#q6 button,#q7 button,#q8 button,#q9 button,#q10 button, #goback {
+    width: 80%;
+    background-color: #4d2975;
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    box-shadow: 0px 5px 30px #4d2975;
+    font-size: 20px;
+    margin: 5px 0;
+    margin-top: 15px;
+    margin-left: 10%;
+    position: relative;
+    animation-name: buttonsR;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    
+}
+
+#goback a{
+    text-decoration: none;
+    color: white;
+}
+
+
+#startQ button:hover, #q1 button:hover,#q2 button:hover,#q3 button:hover,#q4 button:hover,#q5 button:hover,#q6 button:hover,#q7 button:hover,#q8 button:hover,#q9 button:hover,#q10 button:hover,#goback:hover,#check:hover{
+    animation-name: buttons;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    background: darkred;
+    box-shadow: 0px 5px 30px darkred;
+}
+
+#startQ, #q1, #q2, #q3,#q4,#q5,#q6,#q7, #q8,#q9,#q10 {
+    display: none;
+}
+
+#startQ button {
+    width: 80%;
+    background-color: #4d2975;
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+    border: 6px double white;
+    margin-top: 40px;
+}
+
+#result {
+    display: none;
+}
+
+
+#startQ {
+    display: block;
+}
+
+#resultText {
+    font-size: 30px;
+    text-align: center;
+    color: #4d2975;
+    margin: 30px 50px 0;
+}
+
+#check {
+    width: 80%;
+    background-color: #4d2975;
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    box-shadow: 0px 5px 30px #4d2975;
+    font-size: 20px;
+    margin: 8px 0;
+    margin-top: 20px;
+    margin-left: 10%;
+    position: relative;
+    animation-name: buttonsR;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+
+
+
+
+
+
+
+
